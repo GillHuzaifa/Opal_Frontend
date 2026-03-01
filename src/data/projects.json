@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Industrial ERP v5",
+    "categoryKey": "erp",
+    "categoryDisplay": "ERP Solutions",
+    "description": "Comprehensive enterprise resource planning for Izhar Foods, automating supply chain and finance.",
+    "isFeatured": true,
+    "image": "https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=800"
+  },
+  {
+    "id": 2,
+    "title": "Hikvision Surveillance Hub",
+    "categoryKey": "networking",
+    "categoryDisplay": "Networking & Security",
+    "description": "End-to-end IP camera deployment and network infrastructure for Al-Fatah retail outlets.",
+    "isFeatured": false,
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 3,
+    "title": "E-Commerce Ecosystem",
+    "categoryKey": "web",
+    "categoryDisplay": "Web Development",
+    "description": "A high-performance online marketplace for Loot.Sale with seamless payment integration.",
+    "isFeatured": false,
+    "image": "https://images.unsplash.com/photo-1557821333-22954842927f?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 4,
+    "title": "POS System Integration",
+    "categoryKey": "erp",
+    "categoryDisplay": "ERP Solutions",
+    "description": "Real-time inventory and point-of-sale synchronization for multi-branch retail.",
+    "isFeatured": false,
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600"
+  },
+  {
+    "id": 5,
+    "title": "Branch Connectivity",
+    "categoryKey": "networking",
+    "categoryDisplay": "Networking",
+    "description": "Secure VPN and wireless bridge solutions for Ghani Group offices.",
+    "isFeatured": false,
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=600"
+  }
+]
