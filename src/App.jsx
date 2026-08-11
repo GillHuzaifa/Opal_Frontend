@@ -17,6 +17,7 @@ import Reviews from './sections/Reviews'; // New Section
 import Industries from './sections/Industries';
 import Services from './sections/Services';
 import Careers from './sections/Careers';
+import Updates from './sections/Updates';
 import PortalEntry from './sections/PortalEntry';
 import Contact from './sections/Contact';
 
@@ -44,6 +45,7 @@ function App() {
   // 2. Sub-View State: For showing specific Product pages
   const [activeProduct, setActiveProduct] = useState(null);
   const [showCareers, setShowCareers] = useState(false);
+  const [showUpdates, setShowUpdates] = useState(false);
 
   // 3. Tab States
   const [portalTab, setPortalTab] = useState('dashboard');
@@ -77,6 +79,7 @@ function App() {
   const resetToHome = () => {
     setActiveProduct(null);
     setShowCareers(false);
+    setShowUpdates(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -84,7 +87,7 @@ function App() {
   if (currentView === 'public') {
     return (
       <div className="bg-white min-h-screen selection:bg-[#FFD700] selection:text-[#2D4356]">
-        <AnnouncementModal />
+        <AnnouncementModal onExplore={() => { setShowUpdates(true); window.scrollTo({top: 0, behavior: 'smooth'}); }} />
         
         <Navbar 
           onPortalClick={() => setCurrentView('portal_auth')} 
@@ -100,6 +103,8 @@ function App() {
               product={activeProduct} 
               onBack={resetToHome} 
             />
+          ) : showUpdates ? (
+            <Updates onBack={resetToHome} />
           ) : showCareers ? (
             <Careers onBack={resetToHome} />
           ) : (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Megaphone, ArrowRight, BellRing } from 'lucide-react';
 
-const AnnouncementModal = () => {
+const AnnouncementModal = ({ onExplore }) => {
   const [isVisible, setIsVisible] = useState(false);
 
 // Replace the old useEffect with this one:
@@ -73,7 +73,10 @@ const closePortal = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 w-full">
                 <button 
-                  onClick={closePortal}
+                  onClick={() => {
+                    closePortal();
+                    if(onExplore) onExplore();
+                  }}
                   className="flex-[2] bg-[#2D4356] text-white py-5 rounded-2xl font-black uppercase tracking-widest text-[10px] hover:bg-[#FFD700] hover:text-[#2D4356] transition-all flex items-center justify-center gap-3 shadow-xl shadow-[#2D4356]/20"
                 >
                   Explore Update <ArrowRight size={16} />
