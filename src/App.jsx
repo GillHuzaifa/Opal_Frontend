@@ -91,6 +91,7 @@ function App() {
           onAdminClick={() => setCurrentView('admin_auth')}
           onProductSelect={handleProductSelect}
           onHomeClick={resetToHome}
+          onCareerClick={() => { setShowCareers(true); window.scrollTo({top: 0, behavior: 'smooth'}); }}
         />
         
         <main>

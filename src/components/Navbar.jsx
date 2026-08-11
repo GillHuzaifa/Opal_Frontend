@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Shield, Globe, Lock, ArrowRight } from 'lucide-react';
 
-const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick }) => {
+const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick, onCareerClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showProducts, setShowProducts] = useState(false);
@@ -113,6 +113,12 @@ const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick }) =
               {link.name}
             </a>
           ))}
+          <button 
+            onClick={onCareerClick}
+            className="text-[11px] font-black uppercase tracking-widest text-[#2D4356] hover:text-[#FFD700] transition-colors"
+          >
+            Careers
+          </button>
         </div>
 
         {/* CTA AREA - DUAL ACCESS */}
@@ -158,6 +164,12 @@ const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick }) =
                   {link.name}
                 </a>
               ))}
+              <button 
+                onClick={() => { setIsOpen(false); onCareerClick(); }}
+                className="block text-lg sm:text-xl font-black text-[#2D4356] uppercase tracking-tighter text-left"
+              >
+                Careers
+              </button>
               <hr className="border-gray-50" />
               <div className="space-y-4">
                 <button onClick={onAdminClick} className="w-full border-2 border-[#2D4356] py-3 sm:py-4 rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs">
