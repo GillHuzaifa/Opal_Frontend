@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle, Clock, Globe2 } from 'lucide-
 
 const Contact = () => {
   const offices = [
-    { city: "Lahore (HQ)", address: "30 Madina Electric Market, Shah Alam", phone: "03-111-807-807" },
+    { city: "Lahore (HQ)", address: "H No. 272, Street No 10, Talha Block Bahria Town Lahore", phone: "+92 323 6666 855, +92 302 333 00 71" },
     { city: "Regional Support", address: "Serving Central & Southern Clusters", email: "support@opal.com.pk" }
   ];
 
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">24/7 Support Hotline</p>
-                  <p className="text-lg sm:text-xl font-black text-[#2D4356]">03-111-807-807</p>
+                  <p className="text-lg sm:text-xl font-black text-[#2D4356]">+92 323 6666 855, +92 302 333 00 71</p>
                 </div>
               </div>
 
