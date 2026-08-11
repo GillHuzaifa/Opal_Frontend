@@ -10,7 +10,7 @@ const ProductDetail = ({ product, onBack }) => {
     e.preventDefault();
     const subject = `Technical Demo Request for ${product.name}`;
     const body = `Name: ${formData.name}%0D%0ACompany: ${formData.company}%0D%0APhone: ${formData.phone}%0D%0AEmail: ${formData.email}%0D%0AMessage: ${formData.message}`;
-    window.location.href = `mailto:mail@opalpakistan.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    window.location.href = `mailto:opalpakistan@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     setShowDemoForm(false);
   };
   return (

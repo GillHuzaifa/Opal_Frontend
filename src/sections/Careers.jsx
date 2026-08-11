@@ -86,7 +86,7 @@ const Careers = ({ onBack }) => {
             <h4 className="text-lg font-black text-white mb-2">Don't see a fit?</h4>
             <p className="text-sm font-bold text-gray-400 mb-6">We're always looking for exceptional talent. Send us your resume.</p>
             <a 
-              href="mailto:mail@opalpakistan.com?subject=General Application"
+              href="mailto:opalpakistan@gmail.com?subject=General Application"
               className="inline-flex items-center justify-center gap-2 bg-[#FFD700] text-[#2D4356] px-8 py-4 rounded-xl text-[11px] font-black uppercase tracking-widest hover:bg-white transition-all shadow-lg active:scale-95"
             >
               Submit General Application <Send size={14} />
