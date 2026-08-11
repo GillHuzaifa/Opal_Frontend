@@ -50,16 +50,10 @@ const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick }) =
         
         {/* LOGO */}
         <div 
-          className="flex items-center gap-2 cursor-pointer group" 
+          className="flex items-center cursor-pointer" 
           onClick={onHomeClick}
         >
-          <div className="w-10 h-10 bg-[#2D4356] rounded-xl flex items-center justify-center text-[#FFD700] shadow-lg group-hover:bg-[#FFD700] group-hover:text-[#2D4356] transition-colors">
-            <Shield size={22} fill="currentColor" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-xl font-black text-[#2D4356] tracking-tighter leading-none uppercase">OPAL</span>
-            <span className="text-[8px] font-black uppercase tracking-[0.3em] text-gray-400 leading-none mt-1">IzharSoft Legacy</span>
-          </div>
+          <img src="/logo.png" alt="Opal Technologies" className="h-10 lg:h-12 w-auto object-contain" />
         </div>
 
         {/* DESKTOP LINKS */}

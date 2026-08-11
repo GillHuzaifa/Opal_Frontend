@@ -15,7 +15,8 @@ const Team = () => {
       name: "M. Qaiser Izhar",
       role: "Founder & CEO",
       desc: "25+ years of expertise in industrial automation and enterprise architecture.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400", // Placeholder
+      image: "/qaiser_izhar.jpg",
+      linkedin: "https://www.linkedin.com/in/muhammad-qaiser-izhar-it-head"
     },
     {
       name: "Sheikh Faisal Izhar",
@@ -76,9 +77,15 @@ const Team = () => {
                   {person.desc}
                 </p>
                 <div className="flex gap-4">
-                  <button className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#2D4356] hover:bg-[#2D4356] hover:text-white transition-all">
-                    <Linkedin size={18} />
-                  </button>
+                  {person.linkedin ? (
+                    <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#2D4356] hover:bg-[#2D4356] hover:text-white transition-all">
+                      <Linkedin size={18} />
+                    </a>
+                  ) : (
+                    <button className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#2D4356] hover:bg-[#2D4356] hover:text-white transition-all">
+                      <Linkedin size={18} />
+                    </button>
+                  )}
                   <button className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#2D4356] hover:bg-[#2D4356] hover:text-white transition-all">
                     <Mail size={18} />
                   </button>
