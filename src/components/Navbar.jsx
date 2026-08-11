@@ -53,7 +53,7 @@ const Navbar = ({ onPortalClick, onAdminClick, onProductSelect, onHomeClick, onC
           className="flex items-center cursor-pointer" 
           onClick={onHomeClick}
         >
-          <img src="/logo.png" alt="Opal Technologies" className="h-10 lg:h-12 w-auto object-contain" />
+          <img src="/logo-transparent.png" alt="Opal Technologies" className="h-10 lg:h-12 w-auto object-contain" />
         </div>
 
         {/* DESKTOP LINKS */}
