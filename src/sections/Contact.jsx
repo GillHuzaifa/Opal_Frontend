@@ -40,7 +40,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 sm:gap-6 group">
+              <a href="https://wa.me/923236666855" target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 sm:gap-6 group cursor-pointer">
                 <div className="w-10 h-10 sm:w-14 sm:h-14 bg-white text-[#2D4356] border border-gray-100 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#FFD700] transition-all">
                   <MessageCircle size={24} />
                 </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-1">WhatsApp Business</p>
                   <p className="text-lg sm:text-xl font-black text-[#2D4356]">Start a Chat</p>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div className="grid gap-6">
