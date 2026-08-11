@@ -16,6 +16,7 @@ import Products from './sections/Products';
 import Reviews from './sections/Reviews'; // New Section
 import Industries from './sections/Industries';
 import Services from './sections/Services';
+import Careers from './sections/Careers';
 import PortalEntry from './sections/PortalEntry';
 import Contact from './sections/Contact';
 
@@ -42,6 +43,7 @@ function App() {
   
   // 2. Sub-View State: For showing specific Product pages
   const [activeProduct, setActiveProduct] = useState(null);
+  const [showCareers, setShowCareers] = useState(false);
 
   // 3. Tab States
   const [portalTab, setPortalTab] = useState('dashboard');
@@ -74,6 +76,7 @@ function App() {
 
   const resetToHome = () => {
     setActiveProduct(null);
+    setShowCareers(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -96,11 +99,13 @@ function App() {
               product={activeProduct} 
               onBack={resetToHome} 
             />
+          ) : showCareers ? (
+            <Careers onBack={resetToHome} />
           ) : (
             <>
               <Hero onExplore={() => document.getElementById('products').scrollIntoView({behavior:'smooth'})} />
               <Legacy />
-              <Team />
+              <Team onCareerClick={() => { setShowCareers(true); window.scrollTo({top: 0, behavior: 'smooth'}); }} />
               <Products onProductSelect={handleProductSelect} />
               <Reviews /> 
               <Industries />

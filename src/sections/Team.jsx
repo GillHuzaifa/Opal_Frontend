@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Mail, ShieldCheck, Code2, Network, UserCog } from 'lucide-react';
 
-const Team = () => {
+const Team = ({ onCareerClick }) => {
   const departments = [
     { name: "Executive Leadership", icon: <ShieldCheck size={16} /> },
     { name: "ERP Development", icon: <Code2 size={16} /> },
@@ -103,7 +103,7 @@ const Team = () => {
         <div className="mt-12 sm:mt-16 lg:mt-20 p-6 sm:p-8 lg:p-12 bg-[#2D4356] rounded-2xl lg:rounded-[3rem] text-center">
           <h3 className="text-lg sm:text-xl font-black text-white mb-2 uppercase tracking-widest">Join the Engineering Elite</h3>
           <p className="text-gray-400 text-sm max-w-lg sm:max-w-xl mx-auto mb-6 sm:mb-8 font-medium">We are always looking for senior ERP developers and infrastructure specialists to join our 25-year mission.</p>
-          <button className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FFD700] border-b-2 border-[#FFD700] pb-1 hover:text-white hover:border-white transition-all">
+          <button onClick={onCareerClick} className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FFD700] border-b-2 border-[#FFD700] pb-1 hover:text-white hover:border-white transition-all">
             View Career Openings
           </button>
         </div>
