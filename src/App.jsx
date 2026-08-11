@@ -4,6 +4,10 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import AnnouncementModal from './components/AnnouncementModal'; // The "Big Toast"
 
+// --- AUTHENTICATION ---
+import StaffLogin from './auth/StaffLogin';
+import ClientAuth from './auth/ClientAuth';
+
 // --- PUBLIC HOME SECTIONS ---
 import Hero from './sections/Hero'; // Updated with Slideshow
 import Legacy from './sections/Legacy';
@@ -80,8 +84,8 @@ function App() {
         <AnnouncementModal />
         
         <Navbar 
-          onPortalClick={() => setCurrentView('portal')} 
-          onAdminClick={() => setCurrentView('admin')}
+          onPortalClick={() => setCurrentView('portal_auth')} 
+          onAdminClick={() => setCurrentView('admin_auth')}
           onProductSelect={handleProductSelect}
           onHomeClick={resetToHome}
         />
@@ -101,7 +105,7 @@ function App() {
               <Reviews /> 
               <Industries />
               <Services />
-              <div onClick={() => setCurrentView('portal')} className="cursor-pointer">
+              <div onClick={() => setCurrentView('portal_auth')} className="cursor-pointer">
                 <PortalEntry />
               </div>
               <Contact />
@@ -115,7 +119,7 @@ function App() {
               © 2026 OPAL Technologies | IzharSoft Group
             </p>
             <button 
-              onClick={() => { setCurrentView('admin'); window.scrollTo(0,0); }}
+              onClick={() => { setCurrentView('admin_auth'); window.scrollTo(0,0); }}
               className="text-gray-600 text-[9px] font-bold uppercase tracking-widest hover:text-[#FFD700] transition-colors"
             >
               Internal Staff Control Panel
@@ -124,6 +128,15 @@ function App() {
         </footer>
       </div>
     );
+  }
+
+  // --- VIEW 1.5: AUTHENTICATION VIEWS ---
+  if (currentView === 'admin_auth') {
+    return <StaffLogin onLoginSuccess={() => setCurrentView('admin')} onBack={() => setCurrentView('public')} />;
+  }
+
+  if (currentView === 'portal_auth') {
+    return <ClientAuth onAuthSuccess={() => setCurrentView('portal')} onBack={() => setCurrentView('public')} />;
   }
 
   // --- VIEW 2: SECURE CLIENT PORTAL ---
