@@ -13,7 +13,6 @@ import Hero from './sections/Hero'; // Updated with Slideshow
 import Legacy from './sections/Legacy';
 import Team from './sections/Team';
 import Products from './sections/Products';
-import Reviews from './sections/Reviews'; // New Section
 import Industries from './sections/Industries';
 import Services from './sections/Services';
 import Careers from './sections/Careers';
@@ -113,7 +112,6 @@ function App() {
               <Legacy />
               <Team onCareerClick={() => { setShowCareers(true); window.scrollTo({top: 0, behavior: 'smooth'}); }} />
               <Products onProductSelect={handleProductSelect} />
-              <Reviews /> 
               <Industries />
               <Services />
               <div onClick={() => setCurrentView('portal_auth')} className="cursor-pointer">
